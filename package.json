@@ -1,0 +1,14 @@
+{
+  "name": "sentiment-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --env-file=.env scripts/dev-server.js",
+    "check": "node --check api/analyze.js && node --check scripts/dev-server.js && node --check scripts/test-api.js && node --check public/js/app.js",
+    "test:api": "node scripts/test-api.js"
+  }
+}
